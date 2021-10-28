@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+
+body {
+    padding: 1em;
+}
+
+body::before {
+    z-index: -1;
+    content: ' ';
+    background-image: url("https://cdn.theatlantic.com/thumbor/jrjKK6reUBMFSqIA8RLVwzyebeE=/600x401/media/img/photo/2021/02/mount-etna/a01_AP21048435474217/original.jpg");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:white;
+    top: 0;
+    left:0;
+    opacity: 0.8;
+}
+
+p {
+    color:black;
+    
+}
+
+#menu{
+    
+    text-align:right;
+}
