@@ -4,6 +4,7 @@
 
 body {
     padding: 1em;
+    min-width: 100vh ;
 }
 
 body::before {
@@ -31,3 +32,11 @@ p {
     
     text-align:right;
 }
+
+footer{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
