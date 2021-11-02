@@ -1,3 +1,24 @@
 
 
+.minia_item{
+    max-width: 180px;
+    max-height: 130px;
+    border: 4.5px gold ridge;
+    border-radius:20px ;
 
+}
+/*  to do rotation 3D des miniature ou ouverture mini page interne */
+.minia_item:hover{
+    max-width: 30%;
+    max-height: 60%;
+    transform: rotateY(150deg);
+    transform: rotate3d(3);
+}
+
+img {
+    display: block flex;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+    
+  }

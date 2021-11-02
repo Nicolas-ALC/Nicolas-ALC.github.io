@@ -40,3 +40,10 @@ footer{
 
 }
 
+a:visited{
+    color:chocolate;
+}
+
+a:hover{
+    color: crimson;
+}
