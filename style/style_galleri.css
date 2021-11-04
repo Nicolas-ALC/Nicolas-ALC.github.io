@@ -1,11 +1,8 @@
-
-
 .minia_item{
     max-width: 180px;
     max-height: 130px;
     border: 4.5px gold ridge;
     border-radius:20px ;
-
 }
 /*  to do rotation 3D des miniature ou ouverture mini page interne */
 .minia_item:hover{
@@ -13,7 +10,6 @@
     max-height: 60%;
     transform: rotate3d(0, -150, 1, 1turn);
 }
-
 img {
     display: block flex;
     margin-right: auto;
@@ -21,3 +17,120 @@ img {
     flex-direction: row;
     
   }
+/* https://www.gif-maniac.com/gifs/10/9691.gif(gif flan) 
+*/
+.container_image {
+    position:relative;
+    display: flex;
+    justify-content:right;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url(https://www.detoursenfrance.fr/sites/art-de-vivre/files/Import/det_BRAle3872.jpg);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+    z-index: 2;
+    background-size: cover;
+}
+.container_image::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+bottom: 0;
+left: 0;
+transition: ease-in-out 0.4s;
+transform: scaleX(0.4);
+transform-origin: right;
+background-position: bottom;
+background: inherit;
+opacity: 0;
+z-index: -1;
+margin: auto;
+border-radius: 120px;
+}
+/*clone  */
+.container_image:hover::before{
+    width: 100%;
+    transform: translate3d(60%, 0px, 0px);
+    opacity: 1;
+}
+/*  half-square G */
+.container_image:hover {
+    border-radius: 0;
+    width: 450px;
+    height: 310px;
+}
+/* half-square D */
+.container_image:hover::before {
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.8) translate3d(18%, 0px, 0px);
+}
+#conteneur{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+/*[element]{   bordure de miniature
+    max-width: 180px;
+    max-height: 130px;
+    border: 4.5px gold ridge;
+    border-radius:20px ;
+}  */
+.element_1{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    flex-direction:row;
+    background-image: url(/image/un_super_paysage.jpeg);
+    width: 200px;
+    height: 200px;
+    flex-wrap: nowrap;
+}
+.element_2{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    background-image: url(/image/paysage_de_test.jpg);
+    width: 200px;
+    height: 200px;
+}
+.element_3{
+    position:relative;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    background-image: url(https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/article_main_image/public/media/article/image/wadi_rum_desert.jpg?itok=wx0sAwxb);
+    width: 200px;
+    height: 200px;
+}
+.element_1{
+position: absolute;
+content: "";
+width: 100%;
+height: 100%;
+transition: ease-in-out 0.4s;
+transform: scaleX(0.4);
+transform-origin: right;
+border-radius: 120px;
+
+}
+.element_1::before:hover{
+    width: 100%;
+    transform: translate3d(60%, 0px, 0px);
+    opacity: 1;
+}
+.element_1:hover {
+    border-radius: 0;
+    width: 450px;
+    height: 310px;
+}
+.element_1:hover::before {
+    width: 100%;
+    opacity: 1;
+    transform: scale(0.8) translate3d(18%, 0px, 0px);
+}
