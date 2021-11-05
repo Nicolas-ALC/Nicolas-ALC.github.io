@@ -69,10 +69,17 @@ border-radius: 120px;
     opacity: 0;
     transform: scale(0.8) translate3d(18%, 0px, 0px);
 }
+
+* {
+    box-sizing: border-box;
+}
 #conteneur{
     display: flex;
     align-items: center;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 /*[element]{   bordure de miniature
     max-width: 180px;
@@ -86,29 +93,37 @@ border-radius: 120px;
     justify-content:center;
     flex-direction:row;
     background-image: url(/image/un_super_paysage.jpeg);
-    width: 200px;
-    height: 200px;
-    flex-wrap: nowrap;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+    background-size: cover;
 }
-.element_2{
+    .element_2{
     position:relative;
     display: flex;
     justify-content:center;
     flex-direction: row;
     background-image: url(/image/paysage_de_test.jpg);
-    width: 200px;
-    height: 200px;
-}
-.element_3{
-    position:relative;
-    display: flex;
-    justify-content:center;
-    flex-direction: row;
-    background-image: url(https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/article_main_image/public/media/article/image/wadi_rum_desert.jpg?itok=wx0sAwxb);
-    width: 200px;
-    height: 200px;
-}
-.element_1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition:ease-in-out 0.3s;
+    background-size: cover;
+    }
+        .element_3{
+            position:relative;
+            display: flex;
+            justify-content:center;
+            flex-direction: row;
+            background-image: url(https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/article_main_image/public/media/article/image/wadi_rum_desert.jpg?itok=wx0sAwxb);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition:ease-in-out 0.3s;
+            background-size: cover;
+        }
+.element_1::before{
 position: absolute;
 content: "";
 width: 100%;
@@ -123,14 +138,78 @@ border-radius: 120px;
     width: 100%;
     transform: translate3d(60%, 0px, 0px);
     opacity: 1;
+    transform: scale(0.8) translate3d(18%, 0px 0px);
 }
 .element_1:hover {
     border-radius: 0;
     width: 450px;
     height: 310px;
 }
-.element_1:hover::before {
-    width: 100%;
-    opacity: 1;
-    transform: scale(0.8) translate3d(18%, 0px, 0px);
-}
+    .element_2::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        transition: ease-in-out 0.4s;
+        transform: scaleX(0.4);
+        transform-origin: right;
+        border-radius: 120px;
+        }
+        .element_2::before:hover{
+            width: 100%;
+            transform: translate3d(60%, 0px, 0px);
+            opacity: 1;
+            transform: scale(0.8) translate3d(18%, 0px 0px);
+        }
+        .element_2:hover {
+            border-radius: 0;
+            width: 450px;
+            height: 310px;
+                }
+                .element_3::before{
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    transition: ease-in-out 0.4s;
+                    transform: scaleX(0.4);
+                    transform-origin: right;
+                    border-radius: 120px;
+                    
+                    }
+                    .element_3::before:hover{
+                        width: 100%;
+                        transform: translate3d(60%, 0px, 0px);
+                        opacity: 1;
+                        transform: scale(0.8) translate3d(18%, 0px 0px);
+                    }
+                    .element_3:hover {
+                        border-radius: 0;
+                        width: 450px;
+                        height: 310px;
+                    }
+
+        .info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            margin: 0;
+            height: 100vh;
+            transition: ease-in-out 0.3s;
+            transform-origin: right;
+            opacity: 0.5;
+
+        }
+        .element_3 .info{
+            position: relative;
+            line-height: 1.8;
+            transition: ease-in-out 0.3s;
+            opacity: 1;
+         }
+         .element_3:hover .info{
+            transform: translate3d(-60%, 0px, 0px);
+            opacity: 1;
+         }
+
