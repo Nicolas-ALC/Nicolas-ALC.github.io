@@ -100,7 +100,7 @@ border-radius: 120px;
             width: 450px;
             height: 310px;
                 }
-                . ::before{
+                .element_3::before{
                     position: absolute;
                     content: "";
                     width: 100%;
