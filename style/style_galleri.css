@@ -1,78 +1,7 @@
-.minia_item{
-    max-width: 180px;
-    max-height: 130px;
-    border: 4.5px gold ridge;
-    border-radius:20px ;
-}
-/*  to do rotation 3D des miniature ou ouverture mini page interne */
-.minia_item:hover{
-    max-width: 30%;
-    max-height: 60%;
-    transform: rotate3d(0, -150, 1, 1turn);
-}
-img {
-    display: block flex;
-    margin-right: auto;
-    margin-left: auto;
-    flex-direction: row;
-    
-  }
-/* https://www.gif-maniac.com/gifs/10/9691.gif(gif flan) 
+/*  to do rotation 3D des miniature ou ouverture mini page interne
+https://www.gif-maniac.com/gifs/10/9691.gif(gif flan) 
 */
-.container_image {
-    position:relative;
-    display: flex;
-    justify-content:right;
-    flex-direction: column;
-    align-items: flex-end;
-    background-image: url(https://www.detoursenfrance.fr/sites/art-de-vivre/files/Import/det_BRAle3872.jpg);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    transition: ease-in-out 0.3s;
-    z-index: 2;
-    background-size: cover;
-}
-.container_image::before {
-content: "";
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-transition: ease-in-out 0.4s;
-transform: scaleX(0.4);
-transform-origin: right;
-background-position: bottom;
-background: inherit;
-opacity: 0;
-z-index: -1;
-margin: auto;
-border-radius: 120px;
-}
-/*clone  */
-.container_image:hover::before{
-    width: 100%;
-    transform: translate3d(60%, 0px, 0px);
-    opacity: 1;
-}
-/*  half-square G */
-.container_image:hover {
-    border-radius: 0;
-    width: 450px;
-    height: 310px;
-}
-/* half-square D */
-.container_image:hover::before {
-    width: 100%;
-    opacity: 0;
-    transform: scale(0.8) translate3d(18%, 0px, 0px);
-}
 
-* {
-    box-sizing: border-box;
-}
 #conteneur{
     display: flex;
     align-items: center;
@@ -80,6 +9,11 @@ border-radius: 120px;
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+.info{
+    display: flex;
+    align-items:center;
+    text-align: center;
 }
 /*[element]{   bordure de miniature
     max-width: 180px;
@@ -166,7 +100,7 @@ border-radius: 120px;
             width: 450px;
             height: 310px;
                 }
-                .element_3::before{
+                . ::before{
                     position: absolute;
                     content: "";
                     width: 100%;
@@ -175,41 +109,28 @@ border-radius: 120px;
                     transform: scaleX(0.4);
                     transform-origin: right;
                     border-radius: 120px;
-                    
-                    }
-                    .element_3::before:hover{
-                        width: 100%;
-                        transform: translate3d(60%, 0px, 0px);
-                        opacity: 1;
-                        transform: scale(0.8) translate3d(18%, 0px 0px);
-                    }
-                    .element_3:hover {
-                        border-radius: 0;
-                        width: 450px;
-                        height: 310px;
-                    }
+                    }      
 
-        .info{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Montserrat", sans-serif;
-            font-size: 14px;
-            margin: 0;
-            height: 100vh;
-            transition: ease-in-out 0.3s;
-            transform-origin: right;
-            opacity: 0.5;
+.element_3 .info{
+    position: relative;
+    line-height: 1.8;
+    transition: ease-in-out 0.3s;
+    opacity: 0;
+}
+.element_3:hover {
+    border-radius: 0;
+    width: 450px;
+    height: 310px;
+}
+.element_3:hover:before{
+    width: 100%;
+    transform: translate3d(60%, 0px, 0px);
+    opacity: 1;
+    transform: scale(0.8) translate3d(18%, 0px 0px);
+}
+.element_3:hover .info{
+    transform: translate3d(60%, 0px, 0px);
+    opacity: 1;
+}
 
-        }
-        .element_3 .info{
-            position: relative;
-            line-height: 1.8;
-            transition: ease-in-out 0.3s;
-            opacity: 1;
-         }
-         .element_3:hover .info{
-            transform: translate3d(-60%, 0px, 0px);
-            opacity: 1;
-         }
 
