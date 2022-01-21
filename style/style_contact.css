@@ -1,28 +1,53 @@
-#contact {
+main{
+    margin-left: 2em;
+    flex: 1;
+}
+
+    #contact { 
+        /* display: flex; */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+footer{
+    
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left: 2em;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+header{
+    margin-bottom: 40px;
 }
 
-
-.icon {
-
-    display: grid;
-
-    grid-template-rows: repeat(auto-fill, 50px);
-
-}
-
-.icon_item{
-
-    width: 50px;
-    height: 50px;
+.icon_box{
+    width: 100%;
     display: flex;
-    flex-direction:row;
+    
 }
 
+    .icon_item{
 
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
 
-p:hover{
-    color: gold;
-    text-decoration: wavy;
+label{
+    display: flex;
 }
+textarea{
+    min-width: 326px;
+    min-height: 100px;
+}
+input[value=Valider]{
+    margin-top: 1.5em;
+    margin-left: 8em;
+}
+input[type=text]{
+    margin-bottom: 1em;
+}   
