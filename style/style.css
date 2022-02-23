@@ -1,31 +1,22 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    display: block;
+    /* display: block; */
 }
 
 body {
-
-    display: flex;
-    flex-direction: column;
-
     width: 100%;
     min-height: 100vh;
 }
 
-
-body::before {
+body::before{
     z-index: -1;
     content: ' ';
-    background-image: url("https://cdn.theatlantic.com/thumbor/jrjKK6reUBMFSqIA8RLVwzyebeE=/600x401/media/img/photo/2021/02/mount-etna/a01_AP21048435474217/original.jpg");
     height: 100%;
     width: 100%;
     position: fixed;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    top: 0;
-    left:0;
+    background: url("https://cdn.theatlantic.com/thumbor/jrjKK6reUBMFSqIA8RLVwzyebeE=/600x401/media/img/photo/2021/02/mount-etna/a01_AP21048435474217/original.jpg") no-repeat center;
+    background-size: cover;
     opacity: 0.8;
 }
 
@@ -43,6 +34,12 @@ a:hover{
     padding: 8px;
     transition: top 0.3s;
     
+}
+
+#menu{
+position: sticky;
+width: 100%;
+background-color: #333;
 }
 
 #menu ul {
@@ -70,10 +67,7 @@ header h1{
 }
 main{
     flex:1;
+    padding: 1em
+    ;
 }
-#menu{
-position: fixed;
-width: 100%;
-background-color: #333;
 
-}

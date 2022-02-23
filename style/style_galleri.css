@@ -1,16 +1,14 @@
 /*  to do: des miniature ou ouverture mini page interne
 https://www.gif-maniac.com/gifs/10/9691.gif(gif flan) 
 */
-main{
-    margin: 2em;
-}
-#conteneur{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+
+#conteneur {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 /*[div]{   bordure de miniature
     max-width: 180px;
@@ -18,115 +16,162 @@ main{
     border: 4.5px gold ridge;
     border-radius:20px ;
 }  */
-.element_1{
-    position:relative;
-    display: flex;
-    justify-content:center;
-    flex-direction:row;
-    background-image: url(/image/un_super_paysage.jpeg);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: ease-in-out 0.3s;
-    background-size: cover;
+/* .element_1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-image: url(/image/un_super_paysage.jpeg);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: ease-in-out 0.3s;
+  background-size: cover;
 }
-    .element_2{
-    position:relative;
-    display: flex;
-    justify-content:center;
-    flex-direction: row;
-    background-image: url(/image/paysage_de_test.jpg);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition:ease-in-out 0.3s;
-    background-size: cover;
-    }
-    
-.element_3{
-    position:relative;
-    display: flex;
-    justify-content:center;
-    flex-direction: row;
-    background-image: url(https://www.okvoyage.com/wp-content/uploads/2021/02/paysages-norvege-810x538.jpeg);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition:ease-in-out 0.3s;
-    background-size: cover;
-    }
 
-.element_1::before{
-position: absolute;
-content: "";
-width: 100%;
-height: 100%;
-transition: ease-in-out 0.4s;
-transform: scaleX(0.4);
-transform-origin: right;
-border-radius: 120px;
-
+.element_3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-image: url(https://www.okvoyage.com/wp-content/uploads/2021/02/paysages-norvege-810x538.jpeg);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: ease-in-out 0.3s;
+  background-size: cover;
 }
-.element_1::before:hover{
-    width: 100%;
-    transform: translate3d(60%, 0px, 0px);
-    opacity: 1;
-    transform: scale(0.8) translate3d(18%, 0px 0px);
+
+.element_1::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.4s;
+  transform: scaleX(0.4);
+  transform-origin: right;
+  border-radius: 120px;
+}
+.element_1::before:hover {
+  width: 100%;
+  transform: translate3d(60%, 0px, 0px);
+  opacity: 1;
+  transform: scale(0.8) translate3d(18%, 0px 0px);
 }
 .element_1:hover {
-    border-radius: 0;
-    width: 450px;
-    height: 310px;
+  border-radius: 0;
+  width: 450px;
+  height: 310px;
 }
-    .element_2::before{
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        transition: ease-in-out 0.4s;
-        transform: scaleX(0.4);
-        transform-origin: right;
-        border-radius: 120px;
-        }
-        .element_2::before:hover{
-            width: 100%;
-            transform: translate3d(60%, 0px, 0px);
-            opacity: 1;
-            transform: scale(0.8) translate3d(18%, 0px 0px);
-        }
-        .element_2:hover {
-            border-radius: 0;
-            width: 450px;
-            height: 310px;
-                }
-.element_3 {
-    position:absolute;
-    transform-style: preserve-3d;
-}
-.element_3::before{
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        transition: ease-in-out 0.4s;
-        transform: scaleX(0.4);
-        transform-origin: right;
-        border-radius: 120px;
-        background: fixed;
-}
-        .element_3::before:hover{
-            width: 100%;
-            transform: translate3d(60%, 0px, 0px);
-            opacity: 1;
-            transform: scale(0.8) translate3d(18%, 0px 0px);
-        }
-        .element_3:hover {
-            border-radius: 0;
-            width: 450px;
-            height: 310px;
-            transition: 1s; 
-            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg);
-        }
 
-/* https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg
-*/
+.element_3 {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.element_3::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.4s;
+  transform: scaleX(0.4);
+  transform-origin: right;
+  border-radius: 120px;
+  background: fixed;
+}
+.element_3::before:hover {
+  width: 100%;
+  transform: translate3d(60%, 0px, 0px);
+  opacity: 1;
+  transform: scale(0.8) translate3d(18%, 0px 0px);
+}
+.element_3:hover {
+  border-radius: 0;
+  width: 450px;
+  height: 310px;
+  transition: 1s;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg);
+} */
+
+.hive {
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(12, 42.5px);
+  gap: 10px;
+}
+
+.hexa:nth-child(1) {
+  grid-row-start: 1;
+  grid-column: 3 / span 4;
+  position: relative;
+  top: 30px;
+}
+.hexa:nth-child(2) {
+  grid-row-start: 1;
+  grid-column: 7 / span 4;
+  position: relative;
+  top: 30px;
+}
+
+.hexa:nth-child(3),
+.hexa:nth-child(4),
+.hexa:nth-child(5) {
+  grid-row-start: 2;
+  grid-column: span 4;
+}
+
+.hexa:nth-child(6) {
+  grid-row-start: 3;
+  grid-column: 3 / span 4;
+  position: relative;
+  top: -30px;
+}
+.hexa:nth-child(7) {
+  grid-row-start: 3;
+  grid-column: 7 / span 4;
+  position: relative;
+  top: -30px;
+}
+
+.hexa {
+  mask-image: url("../image/hexagon.svg");
+}
+.hexa img {
+  height: 100%;
+  width: auto;
+}
+
+.hexa[value="1"] {
+  background-image: url(../image/un_super_paysage.jpeg);
+  background-size: contain;
+}
+.hexa[value="2"] {
+  background-image: url(../image/paysage_de_test.jpg);
+  background: no-repeat contain;
+}
+.hexa[value="3"] {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg);
+  background: no-repeat contain;
+}
+.hexa[value="4"] {
+  background: no-repeat contain;
+  background-color: white;
+}
+.hexa[value="5"] {
+  background: no-repeat contain;
+  background: skyblue;
+}
+.hexa[value="6"] {
+  background: no-repeat contain;
+  background: yellow;
+}
+.hexa[value="7"] {
+  background: no-repeat contain;
+  background: gold;
+}
+
+/* images : 
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg
+
+
+ */
