@@ -10,12 +10,6 @@ https://www.gif-maniac.com/gifs/10/9691.gif(gif flan)
   width: 100%;
   overflow: hidden;
 }
-/*[div]{   bordure de miniature
-    max-width: 180px;
-    max-height: 130px;
-    border: 4.5px gold ridge;
-    border-radius:20px ;
-}  */
 /* .element_1 {
   position: relative;
   display: flex;
@@ -99,12 +93,24 @@ https://www.gif-maniac.com/gifs/10/9691.gif(gif flan)
   grid-template-columns: repeat(12, 42.5px);
   gap: 10px;
 }
+main{
+  height: 100%;
+}
+section{
+  display: grid;
+  grid-template-columns: 1fr,1fr;
+}
+
+.cadre_statue{
+  grid-column-start: 2;
+}
 
 .hexa:nth-child(1) {
   grid-row-start: 1;
   grid-column: 3 / span 4;
   position: relative;
   top: 30px;
+  
 }
 .hexa:nth-child(2) {
   grid-row-start: 1;
@@ -136,42 +142,50 @@ https://www.gif-maniac.com/gifs/10/9691.gif(gif flan)
 .hexa {
   mask-image: url("../image/hexagon.svg");
 }
+
 .hexa img {
   height: 100%;
   width: auto;
 }
 
-.hexa[value="1"] {
-  background-image: url(../image/un_super_paysage.jpeg);
-  background-size: contain;
+
+/* .hexa[value="1"]:hover{
+  width: 250px;
+  height: 350px;
+  z-index: 2;
+  mask-size:250%;
+  
+} */
+
+
+
+/* .hexa[value="2"] {
+} */
+/* .hexa[value="3"] {
+} */
+/* .hexa[value="4"] {
+} */
+/* .hexa[value="5"] {
+} */
+/* .hexa[value="6"] {
+} */
+/* .hexa[value="7"] {
+} */
+
+.statue{
+  height: 150px;
+  width: 150px;
 }
-.hexa[value="2"] {
-  background-image: url(../image/paysage_de_test.jpg);
-  background: no-repeat contain;
-}
-.hexa[value="3"] {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg);
-  background: no-repeat contain;
-}
-.hexa[value="4"] {
-  background: no-repeat contain;
-  background-color: white;
-}
-.hexa[value="5"] {
-  background: no-repeat contain;
-  background: skyblue;
-}
-.hexa[value="6"] {
-  background: no-repeat contain;
-  background: yellow;
-}
-.hexa[value="7"] {
-  background: no-repeat contain;
-  background: gold;
-}
+
+
+
+
+
 
 /* images : 
 https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/bg_sq_halloween_0.jpg
-
-
- */
+https://picsum.photos/id/1039/600/400.jpg   > https://picsum.photos/id/1039/150/100.jpg 
+https://picsum.photos/id/1015/600/400.jpg   > https://picsum.photos/id/1015/150/100.jpg 
+https://picsum.photos/id/1057/600/400.jpg   > https://picsum.photos/id/1057/150/100.jpg
+https://picsum.photos/id/106/600/400.jpg    > https://picsum.photos/id/106/150/100.jpg
+*/
